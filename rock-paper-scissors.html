@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    
+
+    <script>
+    alert("Let's play a game! No... not that one. Let's play ROCK, PAPER SCISSORS!")
+    let options = ['rock', 'paper', 'scissors']
+    var playerTworesponse = options[Math.floor(Math.random() * options.length)];
+    var playerOneresponse = prompt('Hi Player 1! Please type "rock", "paper" or "scissors".');
+    alert("You chose " + playerOneresponse + ". I chose " + playerTworesponse + ".");
+    if ((playerOneresponse === 'rock' && playerTworesponse === 'scissors') || (playerOneresponse === 'scissors' && playerTworesponse === 'paper') || (playerOneresponse === 'paper' && playerTworesponse === 'rock')) {
+        alert('You win! Rematch?')
+    };
+    if ((playerOneresponse === 'rock' && playerTworesponse === 'rock') || (playerOneresponse === 'scissors' && playerTworesponse === 'scissors') || (playerOneresponse === 'paper' && playerTworesponse === 'paper')) {
+        alert("We're all losers today. Let's play again!")
+    };
+    if ((playerOneresponse === 'rock' && playerTworesponse === 'paper') || (playerOneresponse === 'scissors' && playerTworesponse === 'rock') || (playerOneresponse === 'paper' && playerTworesponse === 'scissors')) {
+        alert("You lose! Prepare for world domination.")
+    };
+    if ((playerOneresponse !== 'rock') && (playerOneresponse !== 'paper') && (playerOneresponse !== 'scissors')) {
+        alert('Pick rock, paper or scissors, dummy!')
+    };
+
+    </script>
+
+</body>
+</html>
