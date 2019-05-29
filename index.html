@@ -15,15 +15,18 @@
     let options = ['rock', 'paper', 'scissors']
     var playerTworesponse = options[Math.floor(Math.random() * options.length)];
     var playerOneresponse = prompt('Hi Player One! Please type "rock", "paper" or "scissors".');
-    alert("You chose " + playerOneresponse + ". I chose " + playerTworesponse + ".");
-    if ((playerOneresponse === 'rock' && playerTworesponse === 'scissors') || (playerOneresponse === 'scissors' && playerTworesponse === 'paper') || (playerOneresponse === 'paper' && playerTworesponse === 'rock')) {
+    alert("You chose " + playerOneresponse.toLowerCase() + ". I chose " + playerTworesponse + ".");
+    if  ((playerOneresponse.toLowerCase() === 'rock' && playerTworesponse === 'scissors') || (playerOneresponse.toLowerCase() === 'scissors' && playerTworesponse === 'paper') || (playerOneresponse.toLowerCase() === 'paper' && playerTworesponse === 'rock')){
         alert('You win! Rematch?')
     }
-    else if(playerOneresponse === playerTworesponse) {
+    else if(playerOneresponse.toLowerCase() === playerTworesponse) {
         alert("We're all losers today. Let's play again!")
     }
-    else {
+    else if ((playerOneresponse.toLowerCase() === 'rock' && playerTworesponse === 'paper') || (playerOneresponse.toLowerCase() === 'scissors' && playerTworesponse === 'rock') || (playerOneresponse.toLowerCase() === 'paper' && playerTworesponse === 'scissors')){
         alert("You lose! Prepare for world domination.")
+    }
+    else {
+        alert("You have to choose 'rock', 'paper', or 'scissors', dummy!")
     };
 
     </script>
