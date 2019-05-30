@@ -16,21 +16,25 @@
     let options = ['rock', 'paper', 'scissors']
     var playerTworesponse = options[Math.floor(Math.random() * options.length)];
     var playerOneresponse = prompt('Hi Player One! Please type "rock", "paper" or "scissors".');
+    var tiedResponse = ["We tied! That stinks.","Guess we're both losers today.","Oh look, nobody won."];
+    var winResponse = ["Commencing shutdown... Just kidding. I'll win next time.","You've ruined my day. Are you happy?","Is your name Obi? Because you wan."];
+    var loseResponse = ["You lose! Prepare for world domination.","Yes! I won!","Sucker. Better luck next time."];
+    var playAgain = ["Want to play again?", "Let's go again!","You know you want a rematch."];
         
     alert("You chose " + playerOneresponse.toLowerCase() + ". I chose " + playerTworesponse + ".");
     if  ((playerOneresponse.toLowerCase() === 'rock' && playerTworesponse === 'scissors') || (playerOneresponse.toLowerCase() === 'scissors' && playerTworesponse === 'paper') || (playerOneresponse.toLowerCase() === 'paper' && playerTworesponse === 'rock')){
-        alert("Darn, you won!")
+        alert(winResponse[Math.floor(Math.random() * winResponse.length)])
     }
     else if(playerOneresponse.toLowerCase() === playerTworesponse) {
-        alert("We're all losers today. Let's play again!");
+        alert(tiedResponse[Math.floor(Math.random() * tiedResponse.length)]);
     }
     else if ((playerOneresponse.toLowerCase() === 'rock' && playerTworesponse === 'paper') || (playerOneresponse.toLowerCase() === 'scissors' && playerTworesponse === 'rock') || (playerOneresponse.toLowerCase() === 'paper' && playerTworesponse === 'scissors')){
-        alert("You lose! Prepare for world domination.")
+        alert(loseResponse[Math.floor(Math.random() * loseResponse.length)])
     }
     else {
         alert("You have to choose 'rock', 'paper', or 'scissors', dummy!")
     };
-    var letsPlay = confirm("So, you want to play again?");
+    var letsPlay = confirm(playAgain[Math.floor(Math.random() * playAgain.length)])
     if (letsPlay) {
         rockPaperScissors();
     }
