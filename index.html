@@ -11,7 +11,6 @@
     
 
     <script>
-    alert("Let's play a game! No... not that one. Let's play ROCK, PAPER, SCISSORS!")
     function rockPaperScissors (){
     let options = ['rock', 'paper', 'scissors']
     var playerTworesponse = options[Math.floor(Math.random() * options.length)];
@@ -39,7 +38,10 @@
         rockPaperScissors();
     }
     };
-    rockPaperScissors();
+    var yes = confirm("Let's play a game! No... not that one. Let's play ROCK, PAPER, SCISSORS!");
+    if (yes) {
+        rockPaperScissors();
+    }
     
 
     </script>
